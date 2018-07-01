@@ -1,0 +1,91 @@
+.gallery_wrap {
+	width: 100%;
+	z-index: 9;
+	position: relative;
+	background: lighten($black, 75);
+	padding: 40px 100px 60px !important;
+	h2 {
+		// color:$white;
+	}
+}
+
+
+.gallery {
+	@extend %fx;
+	@extend %fx--between;
+	li {
+		position: relative;
+		width: 15%;
+		padding-top: 15% !important;
+		background: $blue;
+		box-shadow: 0 0 20px rgba($black, .35);
+		overflow: hidden;
+		transition: all .2s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+	img {
+		position: absolute;
+		width: auto;
+		height: auto;
+		min-width:100%;
+		min-height:100%;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.popup-portfolio {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba($black, .95);
+	top:0;
+	left:0;
+	display:none;
+	._content {
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		width: 80vw;
+	}
+	p {
+		color: rgba($white, .65);
+	}
+	h2 {
+		color: $white;
+	}
+	._img {
+		width: 75%;
+		text-align: center;
+	}
+	._desc {
+		width: 20%;
+	}
+	img {
+		max-width: 90%;
+		height: auto;
+		max-height: 75%;
+	}
+	&.is-active {
+		display: block;
+	}
+}
+
+.close-gallery {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: $blue;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px; 
+	line-height: 35px;
+	text-align: center;
+	color: $white;
+	cursor: pointer;
+}

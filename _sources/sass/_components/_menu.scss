@@ -1,0 +1,65 @@
+// MENU
+// ------------------
+
+#menu-res {
+	li {
+		a {
+			font-size: 1.3em;
+			@extend %fx;
+			@extend %al--center;
+			&:before {
+				content: "";
+				width: 30px;
+				height: 30px; 
+				background-repeat: no-repeat;
+				background-size: cover;
+				margin-right: 20px;
+				@media(max-width: $desktop){
+					margin-right: 5px;
+					display: block;
+					width: 20px;
+					height: 20px; 
+				}
+			}
+			&:hover {
+				transform: translate(5px);
+				color: lighten($blue,20);
+				@media(max-width: $desktop){
+					transform: none;
+				}
+			}
+			@media(max-width: $desktop){
+				justify-content: center;
+			}
+		}	
+		&.menu_link-gas {
+			a:before {
+				background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/gas.svg');
+			}
+		}
+		&.menu_link-plumbing {
+			a:before {
+				background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/plumbing.svg');
+			}
+		}
+		&.menu_link-heating {
+			a:before {
+				background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/heating.svg');
+			}
+		}
+		@media(max-width: $desktop){
+			border-right: 1px solid rgba($white, .2);
+		}
+		&:last-child {
+			@media(max-width: $desktop){
+				border-right: none;
+			}	
+		}
+		@media(max-width: $phablet){
+			font-size: .75em;
+			text-align: center;
+			padding: 0 5px;
+			justify-content: center;
+		}
+	}
+}

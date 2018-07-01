@@ -1,0 +1,184 @@
+// HEADER
+// --------------
+header {
+	position: fixed;
+	width: 300px;
+	background: $black;
+	height: 100vh;
+	@extend %fx;
+	@extend %fx--col;
+	@extend %fx--nowrap;
+	box-shadow: 0 0 10px rgba($black, .35);
+	@media(max-width: $desktop) {
+		width:100%;
+		flex-direction: row;
+		z-index: 10;
+		height: auto;
+		top:0;
+	}
+}
+
+.logo {
+	padding: 20px 20px 40px;
+	color: $white;
+	text-align: center;
+	background: $blue;
+	@media(max-width: $desktop-lg) {
+		padding: 20px 25px;
+	}
+	@media(max-width: $desktop) {
+		padding: 6px;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+		@media(max-width: $desktop) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&-img-1 {
+		width: 100px;
+		@media(max-width: $desktop) {
+			width: 25px;
+			margin-right: 10px;
+		}
+	}
+	&-img-2 {
+		width: 150px;
+		display: block;
+		margin: 0 auto;
+		@media(max-width: $desktop) {
+			width: 80px;
+			
+		}
+	}
+	span {
+		display: block;
+		font-size: 1.2em;
+		opacity: .5;
+		@media(max-width: $desktop) {
+			display: none;
+		}
+	}
+}
+
+nav {
+	padding: 40px 20px;
+	background: $blue-dark;
+	img {
+		width: 32px;
+		height: 32px;
+		margin-right: 5px;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+		padding: 5px 0;
+	}
+	@media (max-width: $desktop) {
+		position: fixed;
+		bottom:0;
+		left:0;
+		padding: 5px;
+		width: 100%;
+		background: $black;
+
+	}
+	ul {
+		@media (max-width: $desktop) {
+			display: flex;
+		}
+	}
+	li {
+		@media (max-width: $desktop) {
+			flex: 1;
+		}
+	}
+}
+
+.contact {
+	flex: 1 0 auto;
+	background: $black;
+	color: $white;
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	&__title {
+		text-align: center;
+		padding: 20px 0;
+		font-size: 1.3em;
+		font-weight: 700;
+		@media (max-width: $desktop) {
+			display: none;
+		}
+	}
+	&__details {
+		background: lighten($black, 5);
+		padding: 40px 20px;
+		@media(max-width: $desktop) {
+			padding: 0;
+			display: flex;
+			width: 100%;
+			background: $blue;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+	&__other {
+		margin-top: 20px;
+		@media(max-width: $desktop) {
+			margin-top: 0;
+		}
+		img {
+			width: 40px;
+			height: 40px;
+			margin: 5px 10px;
+			@media(max-width: $desktop) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+.phone-m {
+	display: none;
+	img {
+		width: 35px;
+		height:35px;
+	}
+	@media(max-width: $desktop) {
+		display: block;
+	}
+}
+
+.phone {
+	font-size: 1.75em;
+	img {
+		width: 32px;
+		height: 32px;
+		margin-right: 5px;
+	}
+	span {
+		font-size: .75em;
+	}
+}
+
+.phone-d {
+	@media(max-width: $desktop) {
+		display: none;
+	}
+}
+
+.header__footer {
+	padding: 10px 20px;
+	img {
+		width: 40px;
+		margin: 5px;
+	}
+	@media (max-width: $desktop) {
+		display: none;
+	}
+}

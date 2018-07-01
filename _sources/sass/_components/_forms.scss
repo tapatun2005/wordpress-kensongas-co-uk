@@ -1,0 +1,41 @@
+// FORMS
+// ------------------
+
+form {
+
+}
+
+input,
+textarea {
+	padding: 10px 20px;
+	border-radius: 5px; 
+	border:none;
+	width: 100%;
+	font-size: 1.1em;
+}
+
+input[type="submit"] {
+	background: $yellow;
+}
+
+textarea {
+	height: 100px;
+}
+
+.quote {
+	position: absolute;
+	bottom: 0;
+	background: $blue;
+	right:5%;
+	padding: 50px 40px 20px;
+	max-width: 420px;
+	box-shadow: 0 0 20px rgba($black, .5);
+	@media(max-width: $desktop-lg){
+		display: none;
+	}
+}
+
+.form_title {
+	color: $white;
+	font-size: 2em;
+}
