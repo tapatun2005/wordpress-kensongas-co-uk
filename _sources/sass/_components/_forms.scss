@@ -25,17 +25,35 @@ textarea {
 .quote {
 	position: absolute;
 	bottom: 0;
+	transform: translate(0, 120%);
 	background: $blue;
 	right:5%;
 	padding: 50px 40px 20px;
 	max-width: 420px;
 	box-shadow: 0 0 20px rgba($black, .5);
-	@media(max-width: $desktop-lg){
+	transition: all .75s ease-in-out;
+	@media(max-width: $desktop){
 		display: none;
+	}
+	&.is-active {
+		transform: translate(0, 0);
 	}
 }
 
 .form_title {
 	color: $white;
 	font-size: 2em;
+}
+
+
+// Contact 7
+div.wpcf7-mail-sent-ok {
+    border: 2px solid #398f14;
+    color: white;
+}
+
+div.wpcf7-response-output {
+    margin: 0em 0em 0em;
+    padding: 0.2em 1em;
+    border: 2px solid #ff0000;
 }

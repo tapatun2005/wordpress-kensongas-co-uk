@@ -217,20 +217,26 @@ $sections[] = array(
 		array(
 			'id'=>'phone_general',
 			'type' => 'text', 
-			'default' => '0988 11 22 33',
+			'default' => '01904 409555',
 			'title' => __('Type your main phone', 'oneengine'),
 		),
 		array(
 			'id'=>'extra_phone_general',
 			'type' => 'text', 
-			'default' => '0988 11 22 33',
+			'default' => '07585 636264',
 			'title' => __('Type your additional number', 'oneengine'),
 		),
 		array(
 			'id'=>'email_general',
 			'type' => 'text', 
-			'default' => 'info@enginethemes.com',
+			'default' => 'info@kensongas.co.uk',
 			'title' => __('Type your email', 'oneengine'),
+		),
+		array(
+			'id'=>'contact_form_general',
+			'type' => 'text', 
+			'default' => '',
+			'title' => __('General Contact Form', 'oneengine'),
 		),
 	),
 );
@@ -633,7 +639,7 @@ $sections[] = array(
 		array(
 			'id'=>'map_footer',
 			'type' => 'textarea', 
-			'default' => '',
+			'default' => '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d430039.86381919717!2d-1.5032153417333414!3d53.89469670894401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e2f6c85afd9f98!2sKenson+Gas%2C+Heating+%26+Plumbing!5e0!3m2!1sen!2suk!4v1530740535336" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>',
 			'title' => __('Insert Google Map Embed Code', 'oneengine'),
 		),
 		
@@ -680,7 +686,7 @@ $sections[] = array(
 			'title' => __('Meta Description', 'oneengine'), 
 			'subtitle' => __('Type your meta description.', 'oneengine'),
 			'desc' => "",
-			'default' => ""
+			'default' => "Kenson Gas, Plumbing and Heating Services in York"
 		),		
 		array(
 			'id'=>'meta_keyword',
@@ -688,7 +694,7 @@ $sections[] = array(
 			'title' => __('Meta Keyword', 'oneengine'), 
 			'subtitle' => __('Type your meta keyword.', 'oneengine'),
 			'desc' => "",
-			'default' => ""
+			'default' => "heating, plumbing, boiler repair"
 		),
 		array(
 			'id'=>'google_analytics',
@@ -697,7 +703,15 @@ $sections[] = array(
 			'subtitle' => __('Paste your Google Analytics javascript or other tracking code here. This code will be added before the closing <head> tag.', 'oneengine'),
 			'desc' => "",
 			'default' => ""
-		)				
+		),
+		array(
+			'id'=>'schema_json',
+			'type' => 'textarea',      
+			'title' => __('Schema JSON Code', 'oneengine'), 
+			'subtitle' => __('Paste your Schema SEO script', 'oneengine'),
+			'desc' => "",
+			'default' => '<script type="application/ld+json"> {"@context": "http://schema.org", "@type": "LocalBusiness", "address": {"@type": "PostalAddress", "addressLocality": "York", "addressRegion": "North Yorkshire", "postalCode":"YO1 8QG", "streetAddress": "18 Blake St"}, "description": "Heating, Gas and Plumbing services in York and Yorkshire", "name": "Kenson Gas", "telephone": "01904 409555", "geo": {"@type": "GeoCoordinates", "latitude": "53.8946967", "longitude": "-1.5032153"}, "sameAs" : [ "https://www.facebook.com/kensongasheatingplumbing/", "https://twitter.com/KensonYork"] } </script>'
+		),
 	)
 	
 );
@@ -717,7 +731,7 @@ $sections[] = array(
 			'title' => __('Facebook', 'oneengine'), 
 			'subtitle' => __('Insert your Facebook fanpage here.', 'oneengine'),
 			'desc' => "",
-			'default' => "https://www.facebook.com/EngineThemes"
+			'default' => "https://www.facebook.com/pg/kensongasheatingplumbing/"
 		),
 		array(
 			'id'=>'twitter',

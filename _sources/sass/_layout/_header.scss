@@ -66,6 +66,9 @@ header {
 nav {
 	padding: 40px 20px;
 	background: $blue-dark;
+	@media (max-width: $desktop-lg) {
+		padding: 20px;
+	}
 	img {
 		width: 32px;
 		height: 32px;
@@ -92,7 +95,7 @@ nav {
 	}
 	li {
 		@media (max-width: $desktop) {
-			flex: 1;
+			flex: auto;
 		}
 	}
 }
@@ -116,7 +119,7 @@ nav {
 	}
 	&__details {
 		background: lighten($black, 5);
-		padding: 40px 20px;
+		padding: 30px 20px;
 		@media(max-width: $desktop) {
 			padding: 0;
 			display: flex;

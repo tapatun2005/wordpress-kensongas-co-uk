@@ -3,20 +3,24 @@
 	z-index: 9;
 	position: relative;
 	background: lighten($black, 75);
-	padding: 40px 100px 60px !important;
+	padding: 40px 100px 60px;
 	h2 {
 		// color:$white;
+	}
+	@media (max-width: $desktop-lg){
+		padding: 20px 40px 40px;
 	}
 }
 
 
 .gallery {
+	padding: 0;
 	@extend %fx;
 	@extend %fx--between;
 	li {
 		position: relative;
 		width: 15%;
-		padding-top: 15% !important;
+		padding: 15% 0 0 0;
 		background: $blue;
 		box-shadow: 0 0 20px rgba($black, .35);
 		overflow: hidden;
@@ -25,13 +29,16 @@
 		&:hover {
 			transform: scale(1.05);
 		}
+		@media (max-width: $desktop-lg){
+			width: 30%;
+			padding-bottom: 20%;
+			margin-bottom: 10px;
+		}
 	}
 	img {
 		position: absolute;
-		width: auto;
+		width: 100%;
 		height: auto;
-		min-width:100%;
-		min-height:100%;
 		top:50%;
 		left:50%;
 		transform: translate(-50%, -50%);
@@ -47,11 +54,16 @@
 	left:0;
 	display:none;
 	._content {
+		@extend %fx;
+		@extend %al--center;
 		position: absolute;
 		top:50%;
 		left:50%;
 		transform: translate(-50%, -50%);
 		width: 80vw;
+		@media(max-width: $desktop) {
+			flex-direction: column;
+		}
 	}
 	p {
 		color: rgba($white, .65);
@@ -65,11 +77,19 @@
 	}
 	._desc {
 		width: 20%;
+		@media(max-width: $desktop) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	img {
-		max-width: 90%;
+		width: auto;
 		height: auto;
-		max-height: 75%;
+		max-width: 90%;
+		max-height:75vh;
+		@media(max-width: $desktop) {
+			max-height:65vh;
+		}
 	}
 	&.is-active {
 		display: block;
@@ -88,4 +108,7 @@
 	text-align: center;
 	color: $white;
 	cursor: pointer;
+	@media(max-width: $tablet) {
+		top: 50px;
+	}
 }

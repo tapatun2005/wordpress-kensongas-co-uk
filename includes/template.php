@@ -124,7 +124,7 @@ function oe_portfolio($numbers = -1){
     $count = 0;
     $countTo = 0;
     $imgArray = array();
-    echo '<ul class="ul-reset gallery">';
+    echo '<ul class="gallery">';
     
     if($query->have_posts()){
         
@@ -152,7 +152,7 @@ function oe_portfolio($numbers = -1){
     ?>
         <div class="popup-portfolio" id="portfolio-<?php echo $countTo; ?>">
             <div class="close-gallery">X</div>
-            <div class="fx -md _content">
+            <div class="_content">
                 <div class="_img">
                     <?php the_post_thumbnail( 'full' ); ?>
                 </div>

@@ -33,7 +33,11 @@ get_header();
 
 				</div>
 				
-				<?php echo do_shortcode( '[contact-form-7 id="30" title="Contact Form - Qoute" html_class="quote"]' ); ?>
+				<?php if( oneengine_option('contact_form_general') != '' ) {?>
+					<?php echo do_shortcode( oneengine_option('contact_form_general') ); ?>
+				<?php }?>
+
+				
 			
 			</div>
 

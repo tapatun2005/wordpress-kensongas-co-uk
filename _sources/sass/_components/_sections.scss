@@ -14,23 +14,28 @@ section {
 		width: 100%;
 		max-width: 50%;
 		position: relative;
+		background: rgba($white, .85);
 		@media(max-width: $phablet) {
-			max-width: 75%;
+			max-width: 100%;
 		}
 	}
 	&__bg {
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translate(15%);
+		transform: translate(100%);
 		height: 100vh;
+		transition: all .5s ease-in-out;
+		&.is-active {
+			transform: translate(15%);
+		}
 	}
 	&-top {
 		position: relative;
 		min-height: 60vh;
 		padding:30px 60px;
 		@media(max-width: $desktop-lg){
-			padding: 0;
+			padding: 30px;
 		}
 	}
 }
@@ -38,6 +43,9 @@ section {
 .section__service {
 	padding:100px 100px;
 	position: relative;
+	@media(max-width: $tablet) {
+		padding: 40px 30px 100px;
+	}
 	h2 {
 		@extend %fx;
 		@extend %al--center;
@@ -45,6 +53,9 @@ section {
 		text-transform: uppercase;
 		position: relative;
 		z-index: 1;
+		@media (max-width:$phablet) {
+			font-size: 2em;
+		}
 		&:before {
 			content: "";
 			width: 75px;
@@ -63,6 +74,9 @@ section {
 		max-width: 45%;
 		max-height:80%;
 		transform: translate(0, -50%);
+		@media (max-width:$phablet) {
+			display: none;
+		}
 
 	}
 	&.-right {
@@ -72,6 +86,9 @@ section {
 		h2,
 		.section__p {
 			margin-left: 50%;
+			@media (max-width:$phablet) {
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -83,20 +100,23 @@ section {
 	font-size: 1.2em;
 	position: relative;
 	z-index: 1;
+	@media (max-width:$phablet) {
+		width: 100%;
+	}
 }
 
 
 #gas-section {
 	h2 {
 		&:before {
-			background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/gas-dark.svg');
+			background-image: url('/wp-content/themes/oneengine/images/icons/gas-dark.svg');
 		}
 	}
 }
 #heating-section {
 	h2 {
 		&:before {
-			background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/heating.svg');
+			background-image: url('/wp-content/themes/oneengine/images/icons/heating.svg');
 		}
 	}
 }
@@ -104,7 +124,7 @@ section {
 #plumbing-section {
 	h2 {
 		&:before {
-			background-image: url('/kensongas-co-uk/wp-content/themes/oneengine/images/icons/plumbing-dark.svg');
+			background-image: url('/wp-content/themes/oneengine/images/icons/plumbing-dark.svg');
 		}
 	}
 }

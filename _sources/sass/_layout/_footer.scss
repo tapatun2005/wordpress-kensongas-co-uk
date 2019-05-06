@@ -24,6 +24,9 @@ footer {
 		@media(max-width: $desktop-lg) {
 			width:100%;
 		}
+		@media(max-width: $phablet) {
+			padding: 30px;
+		}
 	}
 	&_phone {
 		margin-bottom: 20px;

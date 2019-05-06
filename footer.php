@@ -100,5 +100,9 @@
 	</div>  <!-- #content -->
 </div><!-- #app -->
 	<?php wp_footer(); ?>
+
+	<?php if(oneengine_option('schema_json') != '') {?>
+		<?php echo (oneengine_option('schema_json')); ?>
+	<?php } ?>
 </body>
 </html>

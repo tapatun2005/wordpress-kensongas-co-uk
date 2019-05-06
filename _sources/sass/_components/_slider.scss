@@ -1,3 +1,18 @@
+.slide {
+	opacity: 0;
+	pointer-events:none;
+	transform: translate(0, 50px);
+	transition: all .5s ease-in-out;
+	&.is-active {
+		pointer-events:auto;
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
 .intro {
 	padding: 40px;
+	@media (max-width: $phablet) {
+		padding: 20px;
+	}
 }
