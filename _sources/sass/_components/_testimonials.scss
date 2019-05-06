@@ -1,0 +1,33 @@
+.testimonials_wrap {
+	width: 100%;
+	z-index: 9;
+	position: relative;
+	background: lighten($black, 80);
+	padding: 40px 100px 60px;
+
+	@media (max-width: 550px) {
+		padding: 40px;
+	}
+	h2 {
+		// color:$white;
+		color: $black;
+		font-size: 1.5em;
+	}
+
+	img {
+		width: 150px;
+		height: auto;
+	}
+
+	ul {
+		@extend .ul-reset;
+	}
+
+	li {
+		text-align: center;
+		p {
+			font-style: italic;
+			font-size: 1.25em;
+		}
+	}
+}
