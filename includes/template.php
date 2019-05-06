@@ -192,7 +192,7 @@ function oe_testimonial($numbers = -1){
             $query->the_post();
             $count++
     ?>
-        <li class="testimonial">
+        <li class="testimonial <?php if($count === 1) { echo 'is-active'; } ?>">
             <?php the_post_thumbnail( 'full' ); ?>
             <h2><?php the_title();?></h2>
             <?php the_content();?>
@@ -203,6 +203,7 @@ function oe_testimonial($numbers = -1){
         }
     }
     echo '</ul>';
+    echo '<div class="_navs"><div id="prev"><</div><div id="next">></div></div>';
     wp_reset_query(); 
 }
 

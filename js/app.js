@@ -1,5 +1,11 @@
 (function(){
 
+	var active = 0;
+	var slider = document.querySelector('.testimonials_wrap');
+	var navs = slider.querySelectorAll('._navs > div');
+	var items = document.querySelectorAll('.testimonials li');
+	var animSlider = setInterval(intervalTrigger, 5000);
+
 
 	function init(){
 
@@ -10,6 +16,7 @@
 		var portfolio = document.querySelectorAll('.gallery li');
 		var close = document.querySelectorAll('.close-gallery');
 		var section = document.querySelectorAll(".section__service");
+
 		
 		if(portfolio.length > 0) {
 			portfolio.forEach(function(item){
@@ -28,6 +35,19 @@
 			});	
 		}
 
+		for(var i = 0; i < navs.length; i++) {
+			navs[i].addEventListener('click', function(){
+				var dir = this.id;
+				nextSlide(dir);
+			});
+		}
+		
+		slider.addEventListener('mouseover', function(){
+			clearInterval(animSlider);
+		});
+		slider.addEventListener('mouseleave', function(){
+			animSlider = setInterval(intervalTrigger, 5000);
+		});
 
 	}
 
@@ -48,6 +68,26 @@
 			slider[0].classList.add('is-active');
 		}
 	}
+
+	function nextSlide(dir) {
+		var next = dir === 'prev' ? active - 1 : active + 1;
+			
+		items[active].classList.remove('is-active');
+		
+		if(dir === 'prev') {
+			next = items[next] ? next : items.length - 1;
+		} else {
+			next = items[next] ? next : 0;
+		}
+
+		items[next].classList.add('is-active');
+		active = next;
+	}
+
+	function intervalTrigger(){
+		nextSlide('next');
+	}
+
 
 	init();
 

@@ -4,6 +4,7 @@
 	position: relative;
 	background: lighten($black, 80);
 	padding: 40px 100px 60px;
+	position: relative;
 
 	@media (max-width: 550px) {
 		padding: 40px;
@@ -21,13 +22,48 @@
 
 	ul {
 		@extend .ul-reset;
+		position: relative;
+		min-height: 200px;
 	}
 
 	li {
 		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -25%);
+		opacity: 0;
+		transition: all .3s ease-in-out;
+		width: 75%;
+		&.is-active {
+			opacity: 1;
+			z-index: 1;
+			transform: translate(-50%, -50%);
+		}
 		p {
 			font-style: italic;
 			font-size: 1.25em;
+		}
+
+	}
+	._navs {
+		& > div {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+			left: 10px;
+			border-radius: 50%;
+			background: darken($white, 15);
+			cursor: pointer;
+			color: $white;
+		}
+		#next {
+			left: auto;
+			right: 10px;
 		}
 	}
 }

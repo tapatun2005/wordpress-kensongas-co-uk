@@ -36,13 +36,11 @@ get_header();
 				<?php if( oneengine_option('contact_form_general') != '' ) {?>
 					<?php echo do_shortcode( oneengine_option('contact_form_general') ); ?>
 				<?php }?>
-
-				
 			
 			</div>
 
 			<div class="testimonials_wrap">
-				<?php oe_testimonial(1); ?>
+				<?php oe_testimonial(2); ?>
 			</div>
 
 			<div class="gallery_wrap">
