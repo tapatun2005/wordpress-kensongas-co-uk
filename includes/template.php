@@ -173,6 +173,41 @@ function oe_portfolio($numbers = -1){
 
 
 /*-----------------------------------------------------------------------------------*/
+/* OE Portfolio
+/*-----------------------------------------------------------------------------------*/ 
+function oe_testimonial($numbers = -1){
+    global $post;
+    $query = new WP_Query(array(
+            'post_type' => 'testimonial',
+            'posts_per_page' => $numbers
+        ));
+    $count = 0;
+    $countTo = 0;
+    $imgArray = array();
+    echo '<ul class="testimonials">';
+    
+    if($query->have_posts()){
+        
+        while ($query->have_posts()) {
+            $query->the_post();
+            $count++
+    ?>
+        <li class="testimonial">
+            <?php the_post_thumbnail( 'full' ); ?>
+            <h2><?php the_title();?></h2>
+            <?php the_content();?>
+        </li>
+        
+    <?php
+    
+        }
+    }
+    echo '</ul>';
+    wp_reset_query(); 
+}
+
+
+/*-----------------------------------------------------------------------------------*/
 /* Get Taxonomy Icon
 /*-----------------------------------------------------------------------------------*/ 
 function oe_get_tax_icon($tax_id){

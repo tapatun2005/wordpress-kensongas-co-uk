@@ -41,10 +41,15 @@ get_header();
 			
 			</div>
 
+			<div class="testimonials_wrap">
+				<?php oe_testimonial(1); ?>
+			</div>
+
 			<div class="gallery_wrap">
 				<h2>Latest work</h2>
 				<?php oe_portfolio(6); ?>
 			</div>
+
 
 		</section>
 
