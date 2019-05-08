@@ -67,7 +67,7 @@ get_header();
                                     echo '<div class="logo-wrapper" style="'.$width.$left.$top.'"><img src="'. oneengine_option('custom_logo', false, 'url') .'" alt="'.get_bloginfo( 'name' ).'" /></div>';
                                 }else{
                             ?>
-                                <div class="logo-img"><span>E</span></div>
+                                <div class="logo-img"><span></span></div>
                             <?php } ?>
                          </a>
                     </div>  
