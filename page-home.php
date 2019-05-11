@@ -62,12 +62,12 @@ get_header();
 					        echo "" . get_the_content() . "";
 					    echo '</div>';
 					    echo '<div class="testimonials_wrap">';
-					    	echo '' .oe_testimonial(2). '';
+					    	echo '' .oe_testimonial(10). '';
 					    echo '</div>';
 				    echo '</div>';
 				} else {
 					echo '<div class="testimonials_wrap">';
-				    	echo '' .oe_testimonial(2). '';
+				    	echo '' .oe_testimonial(10). '';
 				    echo '</div>';
 				}
 				/* Restore original Post Data */
