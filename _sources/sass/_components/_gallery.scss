@@ -1,6 +1,6 @@
 .gallery_wrap {
 	width: 100%;
-	z-index: 9999;
+	// z-index: 9999;
 	position: relative;
 	background: lighten($black, 75);
 	padding: 40px 100px 60px;
@@ -46,6 +46,7 @@
 }
 
 .popup-portfolio {
+	z-index: 9999;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
