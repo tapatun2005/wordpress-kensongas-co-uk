@@ -1,5 +1,6 @@
 .slide {
 	opacity: 0;
+	height: 100%;
 	pointer-events:none;
 	transform: translate(0, 50px);
 	transition: all .5s ease-in-out;
@@ -10,9 +11,98 @@
 	}
 }
 
+.slider {
+	height: 100%;
+	&_bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left: 0;
+		background-size: cover;
+		background-position: bottom right;
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba($black, .35);
+			background: linear-gradient(135deg, rgba($black,0.65) 0%,rgba($black,0) 100%);
+		}
+	}
+}
+
 .intro {
-	padding: 40px;
+	padding: 40px 150px;
+	position: relative;
+	h1 {
+		color: $white;
+		font-size: 7em;
+		max-width: 860px;
+		line-height: 1em;
+
+		@media(min-width: $desktop-xl) {
+			font-size: 10em;
+			max-width: 75%;
+		}
+
+		@media(max-width: $desktop-lg) {
+			font-size: 5em;
+		}
+
+
+		@media(max-width: $tablet) {
+			font-size: 3.5em;
+			text-align: center;
+		}
+	}
+	@media(max-width: $desktop) {
+		padding: 40px 80px;
+	}
 	@media (max-width: $phablet) {
-		padding: 20px;
+		padding: 60px 20px 20px;
+	}
+}
+
+
+.latest-review {
+	position: absolute;
+	width: 90%;
+	max-width: 450px;
+	bottom: 50px;
+	color: rgba($white, .65);
+	right: 20px;
+	background: rgba($black, .75);
+	padding: 20px 40px;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		right: 100px;
+		border-right: 10px solid transparent;
+		border-top: 20px solid rgba($black, .75);
+		border-left: 10px solid transparent;
+	}
+	._img {
+		margin-bottom: 12px;
+		img {
+			position: relative;
+			width: 100px;
+			height: auto;
+			transform: translate(0);
+		}
+	}
+	._text {
+		font-style: italic;
+		font-size: 1.1em;
+	}
+
+	border-radius: 10px;
+
+	@media (max-width: $desktop) {
+		display: none;
 	}
 }

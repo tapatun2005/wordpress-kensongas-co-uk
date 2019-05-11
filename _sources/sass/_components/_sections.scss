@@ -12,7 +12,7 @@ section {
 	@extend %fx;
 	&__wrap {
 		width: 100%;
-		max-width: 50%;
+		height: 100%;
 		position: relative;
 		background: rgba($white, .85);
 		@media(max-width: $phablet) {
@@ -31,11 +31,42 @@ section {
 		}
 	}
 	&-top {
+		width: 100%;
+		min-height: 100vh;
 		position: relative;
-		min-height: 60vh;
-		padding:30px 60px;
 		@media(max-width: $desktop-lg){
-			padding: 30px;
+			// padding: 30px;
+		}
+	}
+	._icon {
+		position: absolute;
+		bottom: 60px;
+		left: 60px;
+		width: 75px;
+		height: 75px;
+		display: inline-block;
+		margin: 20px 0;
+		border: 2px solid rgba($white, .3);
+		border-radius: 50%;
+		transition: border .2s ease-in-out;
+		cursor: pointer;
+		&:after {
+			content: "↓";
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: $white;
+			font-size: 2em;
+			transition: transform .2s ease-in-out;
+
+		}
+
+		&:hover {
+			border: 2px solid rgba($white, 1);
+			&:after {
+				transform: translate(-50%, -35%);
+			}
 		}
 	}
 }
@@ -125,6 +156,34 @@ section {
 	h2 {
 		&:before {
 			background-image: url('/wp-content/themes/oneengine/images/icons/plumbing-dark.svg');
+		}
+	}
+}
+
+
+
+.about-and-testimonials {
+	position: relative;
+	display: flex;
+	width: 100%;
+	& > div {
+		width: 50%;
+		@media (max-width: $tablet) {
+			width: 100%;	
+		}
+	}	
+
+	@media (max-width: $tablet) {
+		display: block;	
+	}
+
+
+	.about-post {
+		background-color: $white;
+		padding: 60px 80px;
+
+		@media(max-width: $phone-xs) {
+			padding: 60px 40px;			
 		}
 	}
 }

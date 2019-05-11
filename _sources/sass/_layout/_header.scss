@@ -28,7 +28,10 @@ header {
 		padding: 20px 25px;
 	}
 	@media(max-width: $desktop) {
-		padding: 6px;
+		padding: 6px 20px 6px 10px;
+	}
+	@media(max-width: $phone-xs) {
+		padding: 6px 3px 6px 10px;
 	}
 	a {
 		color: $white;
@@ -52,6 +55,10 @@ header {
 		@media(max-width: $desktop) {
 			width: 80px;
 			
+		}
+
+		@media(max-width: $phone-xs) {
+			display: none;
 		}
 	}
 	span {
@@ -107,6 +114,8 @@ nav {
 	flex: 1 0 auto;
 	background: $black;
 	color: $white;
+	display: flex; 
+	flex-direction: column;
 	a {
 		text-decoration: none;
 		color: $white;
@@ -124,22 +133,37 @@ nav {
 		background: lighten($black, 5);
 		padding: 30px 20px;
 		@media(max-width: $desktop) {
-			padding: 0;
+			padding: 0 0 0 20px;
 			display: flex;
 			width: 100%;
 			background: $blue;
-			justify-content: flex-end;
+			// justify-content: flex-end;
 			align-items: center;
 		}
 	}
 	&__other {
 		margin-top: 20px;
+
+		ul {
+			margin-left: 30px;
+		}
 		@media(max-width: $desktop) {
 			margin-top: 0;
 		}
+
+		li {
+			@media(max-width: $phablet) {
+				display: none;
+			}
+			&:nth-child(1) {
+				@media(max-width: $phablet) {
+					display: block;
+				}
+			}
+		}
 		img {
-			width: 40px;
-			height: 40px;
+			width: 24px;
+			height: 24px;
 			margin: 5px 10px;
 			@media(max-width: $desktop) {
 				width: 30px;
@@ -180,6 +204,9 @@ nav {
 
 .header__footer {
 	padding: 10px 20px;
+	flex: 1 0 0;
+	display: flex;
+	align-items: flex-end;
 	img {
 		width: 40px;
 		margin: 5px;

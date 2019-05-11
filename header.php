@@ -174,7 +174,7 @@
                     
                     <?php if(oneengine_option('email_general') != '') {?>
                         <div class="contact__other">
-                            <ul class="ul-reset fx -md -cn">
+                            <ul class="ul-reset fx -md">
                                 <li>
                                     <a href="mailto:<?php echo oneengine_option('email_general') ?>">
                                         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/email.svg" alt="Kenson Gas and Plumbing Contact Email">
@@ -183,7 +183,21 @@
                                 <?php if(oneengine_option('facebook') != '') {?>
                                     <li>
                                         <a href="<?php echo oneengine_option('facebook') ?>" title="Kenson Gas Facebook page" target="_blank">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook.svg" alt="Kenson gas and plumbing facebook">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook.png" alt="Kenson gas and plumbing facebook">
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                                <?php if(oneengine_option('twitter') != '') {?>
+                                    <li>
+                                        <a href="<?php echo oneengine_option('twitter') ?>" title="Kenson Gas twitter page" target="_blank">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter.png" alt="Kenson gas and plumbing twitter">
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                                <?php if(oneengine_option('instagram') != '') {?>
+                                    <li>
+                                        <a href="<?php echo oneengine_option('instagram') ?>" title="Kenson Gas Instagram page" target="_blank">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/instagram.png" alt="Kenson gas and plumbing Instagram">
                                         </a>
                                     </li>
                                 <?php } ?>

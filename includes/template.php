@@ -48,21 +48,23 @@ function oe_main_slider($numbers = -1){
         ));
     $imgArray = array();
     if($query->have_posts()){
-        echo '<div class="slide">';
         while ($query->have_posts()) {
             $query->the_post();
             $slide_color = get_post_meta( $post->ID, 'oe_slider_bg', true );
+            $image = get_the_post_thumbnail_url( $post_id, 'large' );
+        echo '<div class="slide">';
     ?>
+
+        <div class="slider_bg" style="background-image:url(<?php echo $image; ?>)"></div>
         <div class="intro" style="background-color:<?php echo $slide_color; ?>;">
                 <h1><?php the_title() ?></h1>
                 <p><?php the_content(); ?>
                 </p>
-            <?php the_post_thumbnail( 'full' ); ?>
         </div>
         
     <?php
+    echo '</div>';
         }
-        echo '</div>';
     }
     wp_reset_query();
     
@@ -173,7 +175,9 @@ function oe_portfolio($numbers = -1){
 
 
 /*-----------------------------------------------------------------------------------*/
-/* OE Portfolio
+
+
+/* OE oe_testimonial
 /*-----------------------------------------------------------------------------------*/ 
 function oe_testimonial($numbers = -1){
     global $post;
@@ -204,6 +208,38 @@ function oe_testimonial($numbers = -1){
     }
     echo '</ul>';
     echo '<div class="_navs"><div id="prev"><</div><div id="next">></div></div>';
+    wp_reset_query(); 
+}
+
+
+function oe_testimonialFeatured($numbers = -1){
+    global $post;
+    $query = new WP_Query(array(
+            'post_type' => 'testimonial',
+            'posts_per_page' => $numbers
+        ));
+    $count = 0;
+    $countTo = 0;
+    $imgArray = array();
+    
+    
+    if($query->have_posts()){
+        
+        while ($query->have_posts()) {
+            $query->the_post();
+            $count++
+    ?>
+        <div class="latest-review">
+            <div class="_img">
+                <?php the_post_thumbnail( 'full' ); ?>
+            </div>
+            <div class="_text"><?php the_content();?></div>
+        </div>
+        
+    <?php
+    
+        }
+    }
     wp_reset_query(); 
 }
 

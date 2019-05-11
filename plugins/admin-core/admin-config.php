@@ -781,6 +781,14 @@ $sections[] = array(
 			'desc' => "",
 			'default' => ""
 		),
+		array(
+			'id'=>'instagram',
+			'type' => 'text',      
+			'title' => __('Instagram', 'oneengine'), 
+			'subtitle' => __('Insert your Instagram URL here.', 'oneengine'),
+			'desc' => "",
+			'default' => ""
+		),
 	)
 	
 );

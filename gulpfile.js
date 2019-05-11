@@ -23,7 +23,7 @@ gulp.task('default', function(callback){
 	runSequence('compile', 'server', 'watch', callback)
 });
 
-gulp.task('compile', ['styles', 'scripts', 'images']);      
+gulp.task('compile', ['styles', 'scripts', 'images']);
 
 gulp.task('templates', function(){
 	gulp.src('_sources/templates/*.html')

@@ -23,7 +23,12 @@
 	ul {
 		@extend .ul-reset;
 		position: relative;
-		min-height: 200px;
+		// min-height: 200px;
+		min-height: 100%;
+
+		@media (max-width: $tablet) {
+			min-height: 200px;
+		}
 	}
 
 	li {
@@ -43,6 +48,10 @@
 		p {
 			font-style: italic;
 			font-size: 1.25em;
+
+			@media(max-width: $phone-xs) {
+				font-size: 1em;
+			}
 		}
 
 	}
