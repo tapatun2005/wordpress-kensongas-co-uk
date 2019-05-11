@@ -181,6 +181,10 @@ section {
 	.about-post {
 		background-color: $white;
 		padding: 60px 80px;
+		p {
+			font-size: 1.25em;
+			line-height: 1.75em;
+		}
 
 		@media(max-width: $phone-xs) {
 			padding: 60px 40px;			
