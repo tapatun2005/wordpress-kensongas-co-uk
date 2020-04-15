@@ -211,7 +211,7 @@ $sections[] = array(
 		array(
 			'id'=>'address_general',
 			'type' => 'text', 
-			'default' => '173A Nguyen Van Troi, Phu Nhuan, HCMC',
+			'default' => '15 Alexandra Court, James Street, York YO10 3DP',
 			'title' => __('Type your address', 'oneengine'),
 		),
 		array(

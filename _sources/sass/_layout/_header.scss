@@ -131,7 +131,7 @@ nav {
 	}
 	&__details {
 		background: lighten($black, 5);
-		padding: 30px 20px;
+		padding: 30px 20px 10px 20px;
 		@media(max-width: $desktop) {
 			padding: 0 0 0 20px;
 			display: flex;
@@ -173,6 +173,14 @@ nav {
 				width: 30px;
 				height: 30px;
 			}
+		}
+	}
+	&__address {
+		padding-top: 20px;
+		font-size: 0.8rem;
+		opacity: .4;
+		@media(max-width: $desktop) {
+			display: none;
 		}
 	}
 }

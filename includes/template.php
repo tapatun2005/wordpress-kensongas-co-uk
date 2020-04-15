@@ -57,7 +57,7 @@ function oe_main_slider($numbers = -1){
 
         <div class="slider_bg" style="background-image:url(<?php echo $image; ?>)"></div>
         <div class="intro" style="background-color:<?php echo $slide_color; ?>;">
-                <h1><?php the_title() ?></h1>
+                <h1><?php // the_title() ?></h1>
                 <p><?php the_content(); ?>
                 </p>
         </div>
@@ -229,12 +229,12 @@ function oe_testimonialFeatured($numbers = -1){
             $query->the_post();
             $count++
     ?>
-        <div class="latest-review">
+        <!-- <div class="latest-review">
             <div class="_img">
                 <?php the_post_thumbnail( 'full' ); ?>
             </div>
             <div class="_text"><?php the_content();?></div>
-        </div>
+        </div> -->
         
     <?php
     

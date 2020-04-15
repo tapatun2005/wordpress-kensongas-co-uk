@@ -68,9 +68,9 @@
 	                                <a href="tel:<?php echo oneengine_option('phone_general') ?>"><?php echo oneengine_option('phone_general') ?></a>
 	                            </li>
 	                            <?php if(oneengine_option('extra_phone_general') != '') {?>
-	                            <li>
+	                            <!-- <li>
 	                                <a href="tel:<?php echo oneengine_option('extra_phone_general') ?>"><span><?php echo oneengine_option('extra_phone_general') ?></span></a>
-	                            </li>
+	                            </li> -->
 	                            <?php } ?>
 	                        </ul>
 	                    </div>
