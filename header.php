@@ -146,6 +146,10 @@
 
                 <div class="contact__details">
 
+                    <div class="contact__address">
+                        <?php echo oneengine_option('address_general') ?>
+                    </div>
+
                     <?php if(oneengine_option('phone_general') != '') {?>
                         <?php if(oneengine_option('phone_general') != '') {?>
                             <div class="phone-m">
@@ -204,11 +208,6 @@
                             </ul>
                         </div>
                     <?php } ?>
-
-                    <div class="contact__address">
-                        <!-- <?php echo oneengine_option('address_general') ?> -->
-                        Blake House, 18 Blake St, York YO1 8QG
-                    </div>
 
                 </div>
                 
