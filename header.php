@@ -147,7 +147,13 @@
                 <div class="contact__details">
 
                     <div class="contact__address">
-                        <?php echo oneengine_option('address_general') ?>
+                        <?php if(oneengine_option('address_map_url') != '') {?>
+                            <a href="<?php echo oneengine_option('address_map_url') ?>" target="_blank">
+                        <?php } ?>
+                            <?php echo oneengine_option('address_general') ?>
+                        <?php if(oneengine_option('address_map_url') != '') {?>
+                            </a>
+                        <?php } ?>
                     </div>
 
                     <?php if(oneengine_option('phone_general') != '') {?>

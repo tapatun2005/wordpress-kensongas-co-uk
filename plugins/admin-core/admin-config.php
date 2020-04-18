@@ -215,9 +215,15 @@ $sections[] = array(
 			'title' => __('Type your address', 'oneengine'),
 		),
 		array(
+			'id'=>'address_map_url',
+			'type' => 'text', 
+			'default' => 'https://www.google.com/maps/place/15+Alexandra+Ct,+James+St,+Layerthorpe,+York+YO10+3DP/@53.9575513,-1.0678563,17z/data=!3m1!4b1!4m5!3m4!1s0x487931b6df862a27:0xc52425db6a687290!8m2!3d53.9575513!4d-1.0656676',
+			'title' => __('Address map url', 'oneengine'),
+		),
+		array(
 			'id'=>'phone_general',
 			'type' => 'text', 
-			'default' => '01904 409555',
+			'default' => '01904 409 555',
 			'title' => __('Type your main phone', 'oneengine'),
 		),
 		array(
